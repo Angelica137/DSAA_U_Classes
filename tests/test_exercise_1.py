@@ -18,4 +18,5 @@ people = create_person_objects(names, ages, months)
 
 
 def test_get_april_birthday_returns_april_bds():
-    assert get_april_birthdays(people) == 10
+    assert get_april_birthdays(people) == {'Michael': 11, 'Erica': 72, 'Carol': 36, 'Lisa': 37,
+                                           'Lawrence': 87, 'Joseph': 25, 'Margaret': 35, 'Andrew': 13, 'Dusty': 53, 'Robert': 89}
