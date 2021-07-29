@@ -23,13 +23,13 @@ def get_april_birthdays(people):
     # all people with April birthdays as keys, and their updated ages
     # as values. See the test below for an example expected output.
     april_birthdays = {}
-    count = 0
     for person in people:
         if person.birthday_month == "April":
-            count += 1
+            person.age += 1
+            april_birthdays[person.name] = person.age
 
     # TODO: Modify the return statement
-    return count
+    return april_birthdays
 
 
 def get_most_common_month(people):
