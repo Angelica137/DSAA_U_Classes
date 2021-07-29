@@ -40,9 +40,17 @@ def get_most_common_month(people):
     months = {'January': 0, 'February': 0, 'March': 0, 'April': 0, 'May': 0,
               'June': 0, 'July': 0, 'August': 0, 'September': 0, 'October': 0,
               'November': 0, 'December': 0}
-
+    for month in months:
+        for person in people:
+            if person.birthday_month == month:
+                months[month] += 1
+    month_count = months.values()
+    most_common_bd = sorted(month_count)[-1]
+    for key, value in months.items():
+        if value == most_common_bd:
+            return key
     # TODO: Modify the return statement.
-    return
+    return None
 
 
 def test():
@@ -56,7 +64,7 @@ def test():
     people = create_person_objects(names, ages, months)
 
     # Calls to the two functions you have completed.
-    print(get_april_birthdays(people))
+    # print(get_april_birthdays(people))
     print(get_most_common_month(people))
 
 
